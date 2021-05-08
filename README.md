@@ -14,6 +14,8 @@ npm install @sqrtthree/axios-use-bearer-token
 ## How to use
 
 ```ts
+import useBearerToken from '@sqrtthree/axios-use-bearer-token'
+
 const instance = axios.create()
 
 instance.interceptors.request.use(useBearerToken(options: Options))
