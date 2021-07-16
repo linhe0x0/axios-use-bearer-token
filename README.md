@@ -16,14 +16,20 @@ npm install @sqrtthree/axios-use-bearer-token
 ```ts
 import useBearerToken from '@sqrtthree/axios-use-bearer-token'
 
-const instance = axios.create()
+const getAccessToken = () => {
+  return 'your access token'
+}
 
-instance.interceptors.request.use(useBearerToken(options: Options))
+axios.interceptors.request.use(
+  useBearerToken({
+    getAccessToken,
+  })
+)
 ```
 
 ### Options
 
-#### getAccessToken: () => string
+#### `getAccessToken: () => string | Promise<string>`
 
 A function to return access token string that will be added to request header.
 
