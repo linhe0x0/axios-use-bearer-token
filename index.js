@@ -1,11 +1,11 @@
-export default (options = {}) => {
+export default function bearerToken(options = {}) {
   const { getAccessToken } = options
 
   if (!getAccessToken) {
     throw Error('getAccessToken function is required.')
   }
 
-  return (config) => {
+  return function interceptor(config) {
     const accessToken = getAccessToken()
 
     if (accessToken) {
