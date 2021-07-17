@@ -1,12 +1,18 @@
 export default function bearerToken(options = {}) {
-  const { getAccessToken } = options
+  const { bearerToken } = options
 
-  if (!getAccessToken) {
-    throw Error('getAccessToken function is required.')
+  if (!bearerToken) {
+    throw Error('barerToken is required.')
   }
 
   return async function interceptor(config) {
-    const accessToken = await getAccessToken()
+    let accessToken = ''
+
+    if (typeof bearerToken === 'string') {
+      accessToken = bearerToken
+    } else {
+      accessToken = await getAccessToken()
+    }
 
     if (accessToken) {
       config.headers['Authorization'] = `Bearer ${accessToken}`
