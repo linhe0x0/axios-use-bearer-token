@@ -11,7 +11,7 @@ export default function bearerToken(options = {}) {
     if (typeof bearerToken === 'string') {
       accessToken = bearerToken
     } else {
-      accessToken = await getAccessToken()
+      accessToken = await bearerToken()
     }
 
     if (accessToken) {
