@@ -2,16 +2,18 @@
   "name": "@sqrtthree/axios-use-bearer-token",
   "version": "0.1.0",
   "description": "A Bearer token interceptor for axios",
-  "keywords": [
-    "axios-interceptor"
-  ],
-  "main": "index.js",
+  "keywords": ["axios-interceptor"],
+  "main": "dist/index.umd.js",
+  "module": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup index.js --file dist/index.umd.js --format umd --name 'useBearerToken'"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "author": "sqrtthree <imsqrtthree@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "~2.53.2"
+  }
 }
