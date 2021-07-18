@@ -1,4 +1,4 @@
-export default function bearerToken(options = {}) {
+export default function useBearerToken(options = {}) {
   const { bearerToken } = options
 
   if (!bearerToken) {

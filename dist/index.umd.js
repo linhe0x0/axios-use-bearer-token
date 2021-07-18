@@ -4,7 +4,7 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.useBearerToken = factory());
 }(this, (function () { 'use strict';
 
-  function bearerToken(options = {}) {
+  function useBearerToken(options = {}) {
     const { bearerToken } = options;
 
     if (!bearerToken) {
@@ -28,6 +28,6 @@
     }
   }
 
-  return bearerToken;
+  return useBearerToken;
 
 })));
