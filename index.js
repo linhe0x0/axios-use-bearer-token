@@ -15,7 +15,7 @@ export default function useBearerToken(options = {}) {
     }
 
     if (accessToken) {
-      config.headers['Authorization'] = `Bearer ${accessToken}`
+      config.headers.Authorization = `Bearer ${accessToken}`
     }
 
     return config
