@@ -25,7 +25,7 @@
   "devDependencies": {
     "@sqrtthree/eslint-config-base": "~0.1.1",
     "@sqrtthree/prettier-config": "~2.0.1",
-    "ava": "~3.15.0",
+    "ava": "~5.2.0",
     "axios": "~0.21.1",
     "eslint": "~7.31.0",
     "nyc": "~15.1.0",
