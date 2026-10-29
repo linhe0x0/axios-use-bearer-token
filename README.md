@@ -32,9 +32,3 @@ axios.interceptors.request.use(
 #### `bearerToken: () => string | Promise<string>`
 
 A string or function to return access token string that will be added to request header.
-
----
-
-> [sqrtthree.com](https://sqrtthree.com/) &nbsp;&middot;&nbsp;
-> GitHub [@sqrthree](https://github.com/sqrthree) &nbsp;&middot;&nbsp;
-> Twitter [@sqrtthree](https://twitter.com/sqrtthree)
